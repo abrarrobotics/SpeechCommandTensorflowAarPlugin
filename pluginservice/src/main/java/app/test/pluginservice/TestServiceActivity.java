@@ -28,8 +28,10 @@ public class TestServiceActivity {
     }
 
     public static String GetStr() {
+
         resultString = SpeechRecognitionService.getmInstance().getRecognitionOutput();
         Log.d("wat?", "GetStr: " + resultString);
+
         return resultString;
     }
 
