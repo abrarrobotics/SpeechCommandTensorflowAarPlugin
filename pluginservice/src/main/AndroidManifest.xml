@@ -5,10 +5,14 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application>
+        <activity android:name=".TestServiceActivity">
+
+        </activity>
         <service
             android:name=".SpeechRecognitionService"
             android:enabled="true"
             android:exported="true"></service>
+
     </application>
 
 </manifest>

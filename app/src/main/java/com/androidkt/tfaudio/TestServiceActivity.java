@@ -1,5 +1,6 @@
 package com.androidkt.tfaudio;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import app.test.pluginservice.SpeechRecognitionService;
 public class TestServiceActivity extends AppCompatActivity {
 
     TextView outputText;
+    static  String resultString="EmptyCommand";
     Timer timer = null;
 
     @Override
@@ -24,6 +26,17 @@ public class TestServiceActivity extends AppCompatActivity {
         outputText = findViewById(R.id.outputTV);
 
 
+    }
+
+    public  static String GetStr()
+    {
+        return resultString;
+    }
+    public static void Call(Activity activity)
+    {
+        // Creating an intent with the current activity and the activity we wish to start
+        Intent myIntent = new Intent(activity, TestServiceActivity.class);
+        activity.startActivity(myIntent);
     }
 
     public void startServiceClicked(View view) {
@@ -38,6 +51,7 @@ public class TestServiceActivity extends AppCompatActivity {
                         public void run() {
                             String res = SpeechRecognitionService.getmInstance().getRecognitionOutput();
                             outputText.setText(res);
+                            resultString = outputText.getText().toString();
                         }
                     });
                 }
