@@ -24,7 +24,7 @@ public class TestServiceActivity {
     }
 
     public static void StartServiceTestServiceActivityClass() {
-        myActivity.startService(new Intent(myActivity, TestServiceActivity.class));
+        myActivity.startService(new Intent(myActivity, SpeechRecognitionService.class));
     }
 
     public static String GetStr() {
