@@ -7,11 +7,10 @@ import android.media.AudioFormat;
 import android.media.AudioRecord;
 import android.media.MediaRecorder;
 import android.os.IBinder;
-import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
+
 
 import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
 

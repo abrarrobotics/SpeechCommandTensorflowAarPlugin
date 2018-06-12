@@ -4,7 +4,7 @@ package com.androidkt.tfaudio;
 import android.util.Log;
 import android.util.Pair;
 
-import org.tensorflow.Tensor;
+//import org.tensorflow.Tensor;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;

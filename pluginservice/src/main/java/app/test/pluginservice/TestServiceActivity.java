@@ -27,6 +27,10 @@ public class TestServiceActivity {
         myActivity.startService(new Intent(myActivity, SpeechRecognitionService.class));
     }
 
+    public static void openStartServiceActivity() {
+        myActivity.startActivity(new Intent(myActivity, StartServiceActivity.class));
+    }
+
     public static String GetStr() {
         resultString = SpeechRecognitionService.getmInstance().getRecognitionOutput();
         Log.d("wat?", "GetStr: " + resultString);

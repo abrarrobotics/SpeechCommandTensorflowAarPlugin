@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
+//import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     private ListView labelsListView;
     private Thread recordingThread;
     private Thread recognitionThread;
-    private TensorFlowInferenceInterface inferenceInterface;
+//    private TensorFlowInferenceInterface inferenceInterface;
     private List<String> labels = new ArrayList<String>();
     private List<String> displayedLabels = new ArrayList<>();
     private RecognizeCommands recognizeCommands = null;
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
                         MINIMUM_TIME_BETWEEN_SAMPLES_MS);
 
         // Load the TensorFlow model.
-        inferenceInterface = new TensorFlowInferenceInterface(getAssets(), MODEL_FILENAME);
+//        inferenceInterface = new TensorFlowInferenceInterface(getAssets(), MODEL_FILENAME);
 
         // Start the recording and recognition threads.
         requestMicrophonePermission();
@@ -252,10 +252,10 @@ public class MainActivity extends AppCompatActivity {
             }
 
             // Run the model.
-            inferenceInterface.feed(SAMPLE_RATE_NAME, sampleRateList);
-            inferenceInterface.feed(INPUT_DATA_NAME, floatInputBuffer, RECORDING_LENGTH, 1);
-            inferenceInterface.run(outputScoresNames);
-            inferenceInterface.fetch(OUTPUT_SCORES_NAME, outputScores);
+//            inferenceInterface.feed(SAMPLE_RATE_NAME, sampleRateList);
+//            inferenceInterface.feed(INPUT_DATA_NAME, floatInputBuffer, RECORDING_LENGTH, 1);
+//            inferenceInterface.run(outputScoresNames);
+//            inferenceInterface.fetch(OUTPUT_SCORES_NAME, outputScores);
 
             // Use the smoother to figure out if we've had a real recognition event.
             long currentTime = System.currentTimeMillis();
