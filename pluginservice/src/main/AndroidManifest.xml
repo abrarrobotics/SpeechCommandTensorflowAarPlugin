@@ -6,11 +6,11 @@
 
     <application>
         <service
-            android:name=".SpeechRecognitionService"
+            android:name="app.test.pluginservice.SpeechRecognitionService"
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".StartServiceActivity"></activity>
+        <activity android:name="app.test.pluginservice.StartServiceActivity"></activity>
     </application>
 
 </manifest>

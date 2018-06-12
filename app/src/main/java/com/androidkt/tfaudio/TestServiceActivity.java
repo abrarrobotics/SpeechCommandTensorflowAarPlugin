@@ -12,6 +12,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import app.test.pluginservice.SpeechRecognitionService;
+import app.test.pluginservice.StartServiceActivity;
 
 public class TestServiceActivity extends AppCompatActivity {
 
@@ -42,7 +43,8 @@ public class TestServiceActivity extends AppCompatActivity {
     public void startServiceClicked(View view) {
         if (timer == null) {
             timer = new Timer();
-            startService(new Intent(this, SpeechRecognitionService.class));
+//            startService(new Intent(this, SpeechRecognitionService.class));
+            startActivity(new Intent(this, StartServiceActivity.class));
             timer.schedule(new TimerTask() {
                 @Override
                 public void run() {
